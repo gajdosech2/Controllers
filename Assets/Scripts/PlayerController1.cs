@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController1 : MonoBehaviour
 {
+    public bool mouse = false;
+    string axis;
     float rotation = 0;
-    float move_speed = 4;
+    float move_speed = 5;
     float rotation_speed = 80;
 
     Vector3 move_direction = Vector3.zero;
@@ -14,6 +16,7 @@ public class PlayerController1 : MonoBehaviour
 
     void Start()
     {
+        axis = mouse ? "Mouse X" : "Horizontal";
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
@@ -22,7 +25,7 @@ public class PlayerController1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            move_direction = new Vector3(0, 0, 1) * move_speed * Time.deltaTime;
+            move_direction = Vector3.forward * move_speed;
             move_direction = transform.TransformDirection(move_direction);
             animator.SetBool("Walk", true);
         }
@@ -31,8 +34,8 @@ public class PlayerController1 : MonoBehaviour
             move_direction = Vector3.zero;
             animator.SetBool("Walk", false);
         }
-        rotation += Input.GetAxis("Horizontal") * rotation_speed * Time.deltaTime;
+        controller.SimpleMove(move_direction);
+        rotation += Input.GetAxis(axis) * rotation_speed * Time.deltaTime;
         transform.eulerAngles = new Vector3(0, rotation, 0);
-        controller.Move(move_direction);
     }
 }
