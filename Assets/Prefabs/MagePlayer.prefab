@@ -3362,8 +3362,7 @@ GameObject:
   - component: {fileID: 5271867273646816511}
   - component: {fileID: 5271867273637688141}
   - component: {fileID: 6895527065573206834}
-  - component: {fileID: 6895527065573206833}
-  - component: {fileID: 6895527065573206832}
+  - component: {fileID: 459375448407260448}
   m_Layer: 0
   m_Name: MagePlayer
   m_TagString: Untagged
@@ -3447,7 +3446,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &6895527065573206833
+--- !u!114 &459375448407260448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3456,20 +3455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5271867273647132495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c9adcac109f0fe4eb1ee23594710b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouse: 0
---- !u!114 &6895527065573206832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5271867273647132495}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdf030c488ac914fbffca39d07e53fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 773e4cdbf7548614189f9ee2cdba4c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouse: 0
